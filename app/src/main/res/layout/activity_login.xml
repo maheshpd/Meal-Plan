@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_picture" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_dark1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_dark2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/timeat_logo"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/timeat_logo" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeat_logo"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/sfp_ro_display_heavyitalic"
+                android:text="Timeat"
+                android:textColor="@android:color/white"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text1"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:text="Don't think, it's time to ewat"
+                android:textColor="@android:color/white"
+                android:textSize="35sp" />
+
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text2"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edit_bg"
+                android:hint="Your Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:singleLine="true"
+                android:textColorHint="#676767" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/edt_email"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edit_bg"
+                android:hint="Your Password"
+                android:inputType="text|textPassword"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:singleLine="true"
+                android:textColorHint="#676767" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="210dp"
+                android:layout_height="2dp"
+                android:layout_below="@+id/edt_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:background="#fff" />
+
+            <Button
+                android:id="@+id/facebook_btn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/view1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/facebook_btn_design"
+                android:drawableStart="@drawable/facebook"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:paddingStart="35dp"
+                android:text="Enter with Facebook"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/google_btn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/facebook_btn"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/google_btn_design"
+                android:drawableStart="@drawable/google"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:paddingStart="35dp"
+                android:text="Enter with Google"
+                android:textAllCaps="false"
+                android:textColor="#3C3C3C"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/create_account"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/google_btn"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/create_account_btn_design"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:paddingStart="35dp"
+                android:text="LOGIN INTO ACCOUNT"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/create_account"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:gravity="center"
+                android:onClick="SignupPage"
+                android:text="For New User Sign In"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
